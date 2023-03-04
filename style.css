@@ -66,8 +66,8 @@ code {
     background: var(--theme1);
     padding: 0.25rem;
     border-radius: 0.25rem;
-    cursor: pointer;
-    user-select: text;
+    cursor: text;
+    user-select: all;
 }
 
 h1 {
