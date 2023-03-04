@@ -1,0 +1,303 @@
+:root {
+    font-size: 16px;
+
+    --theme1: #0e0b14;
+    --theme2: #120e1a;
+    --theme3: #191525;
+    --theme4: #1e192d;
+    --theme5: #221e33;
+    --theme6: #242038;
+    --theme7: #2a2741;
+    --theme8: #562bf2;
+    --theme9: #593cf6;
+    --theme10: #25e0bd;
+    --theme11: #f8f8ff;
+
+    --red: #ff0037;
+}
+
+@font-face {
+    font-family: whitney;
+    src: url(fonts/Whitney-Semibold.ttf);
+}
+
+@font-face {
+    font-family: whitney;
+    src: url(fonts/Whitney-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(fonts/Poppins-ExtraBold.ttf);
+    font-weight: bold;
+}
+
+/* https://coolors.co/0e0b14-120e1a-191525-1e192d-221e33-242038-2a2741-562bf2-593cf6-25e0bd */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    color: var(--theme11);
+    font-family: poppins;
+    background: url(images/trasparent.png);
+    background-position: center;
+    user-select: none;
+}
+
+h1 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--theme10) solid 0.25rem;
+}
+
+h1 > button {
+    all: unset;
+    cursor: pointer;
+    transition: background 250ms ease;
+    padding: 0 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+h1 > button:hover {
+    background: #f8f8ff37;
+}
+
+h1 > .active {
+    background: #f8f8ff16;
+}
+
+input {
+    all: unset;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background: var(--theme1);
+    border-radius: 0.5rem;
+    color: var(--theme11);
+    cursor: text;
+    text-align: center;
+}
+
+input:invalid {
+    box-shadow: inset 0 0 0 0.25rem var(--red);
+}
+
+input:disabled::placeholder {
+    text-decoration: line-through;
+    color: var(--theme7);
+}
+
+input::placeholder {
+    color: #f8f8ff73;
+}
+
+input[type="range"] {
+    all: unset;
+    background: var(--theme1);
+    border-radius: 0.5rem;
+    color: var(--theme11);
+    height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background: var(--theme10);
+}
+
+input[type="range"]::-moz-range-thumb {
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    background: var(--theme10);
+}
+
+input[type="number"] {
+    width: 3rem;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+
+input[type="color"] {
+    display: none;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.control {
+    display: flex;
+    background: var(--theme1);
+    flex: 1 0 0;
+}
+
+.ctrl {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    flex: 1 0 0;
+}
+
+.ctrl > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+}
+
+.ctrl > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    flex: 1 0 0;
+    overflow: auto;
+}
+
+.ctrl > div > div::-webkit-scrollbar {
+    display: none;
+}
+
+.image-settings, .shape-settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    background: var(--theme3);
+    border-radius: 0.5rem;
+}
+
+.head {
+    font-size: 1rem;
+    padding: 1rem;
+    background: #f8f8ff16;
+    border-radius: 0.5rem;
+    transition: background 250ms ease;
+}
+
+.head:hover {
+    background: #f8f8ff37;
+}
+
+.options > div {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.options > div .mods {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.options section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+.options .sliders {
+    flex: 1 0 0;
+}
+
+.text-ctrl .options > div {
+    display: flex;
+}
+
+.properties {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.properties div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.properties div input {
+    width: 0;
+    flex: 1 0 0;
+}
+
+
+
+.display {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex: 1 0 0;
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+    background: var(--theme1);
+    gap: 0.5rem;
+    padding: 2rem;
+    flex: 1 0 0;
+    overflow: auto;
+}
+
+.general > div {
+    display: none;
+    flex-direction: column;
+    background: var(--theme3);
+    border-radius: 0.5rem;
+    flex: 1 0 0;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.general #obs_content {
+    display: flex;
+}
+
+
+
+.preview {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    aspect-ratio: 16 / 9;
+    background: transparent;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+.preview > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+}

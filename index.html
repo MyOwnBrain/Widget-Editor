@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+        <title>Widgets</title>
+    </head>
+    <body>
+        <div class="control">
+            <div class="ctrl">
+                <div class="back-ctrl">
+                    <h1>Background</h1>
+                    <div>
+                        <div class="image-settings">
+                            <div class="options">
+                                <h2 class="head">Image</h2>
+                                <div>
+                                    <div class="properties">
+                                        <div>
+                                            <input id="image_url" type="url" placeholder="Image URL">
+                                        </div>
+                                    </div>
+                                    <div class="mods">
+                                        <section class="titles">
+                                            <span id="x">X</span>
+                                            <span id="y">Y</span>
+                                            <span id="scale">Scale</span>
+                                            <span id="rotation">Rotation</span>
+                                            <span id="skew">Skew</span>
+                                            <span id="opacity">Opacity</span>
+                                        </section>
+                                        <section class="sliders">
+                                            <input type="range" min="0" max="100">
+                                            <input type="range" min="0" max="100">
+                                            <input type="range" min="0" max="200" value="100">
+                                            <input type="range" min="0" max="360" value="0">
+                                            <input type="range" min="-45" max="45">
+                                            <input type="range" value="100">
+                                        </section>
+                                        <section class="values">
+                                            <input type="number" min="0" max="100" value="50">
+                                            <input type="number" min="0" max="100" value="50">
+                                            <input type="number" min="0" max="200" value="100">
+                                            <input type="number" min="0" max="360" value="0">
+                                            <input type="number" min="-45" max="45" value="0">
+                                            <input type="number" min="0" max="100" value="100">
+                                        </section>
+                                        <section class="units">
+                                            <div>%</div>
+                                            <div>%</div>
+                                            <div>%</div>
+                                            <div>deg</div>
+                                            <div>deg</div>
+                                            <div>%</div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shape-settings">
+                            <div class="options">
+                                <h2 class="head">Shape</h2>
+                                <div>
+                                    <div class="properties">
+                                        <div>
+                                            <input id="shape_color" pattern="[a-fA-F0-9]+$" type="text" maxlength="6" placeholder="Color Hex">
+                                        </div>
+                                    </div>
+                                    <div class="mods">
+                                        <section class="titles">
+                                            <span id="x">X</span>
+                                            <span id="y">Y</span>
+                                            <span id="width">Width</span>
+                                            <span id="height">Height</span>
+                                            <span id="scale">Scale</span>
+                                            <span id="rotation">Rotation</span>
+                                            <span id="skew">Skew</span>
+                                            <span id="radius">Radius</span>
+                                            <span id="opacity">Opacity</span>
+                                        </section>
+                                        <section class="sliders">
+                                            <input type="range" min="0" max="100">
+                                            <input type="range" min="0" max="100">
+                                            <input type="range" min="0" max="512" value="128">
+                                            <input type="range" min="0" max="512" value="128">
+                                            <input type="range" min="0" max="200">
+                                            <input type="range" min="0" max="360" value="0">
+                                            <input type="range" min="-45" max="45">
+                                            <input type="range" min="0" max="256" value="0">
+                                            <input type="range" value="100">
+                                        </section>
+                                        <section class="values">
+                                            <input type="number" min="0" max="100" value="50">
+                                            <input type="number" min="0" max="100" value="50">
+                                            <input type="number" min="0" max="512" value="128">
+                                            <input type="number" min="0" max="512" value="128">
+                                            <input type="number" min="0" max="200" value="100">
+                                            <input type="number" min="0" max="360" value="0">
+                                            <input type="number" min="-45" max="45" value="0">
+                                            <input type="number" min="0" max="256" value="0">
+                                            <input type="number" min="0" max="100" value="100">
+                                        </section>
+                                        <section class="units">
+                                            <div>%</div>
+                                            <div>%</div>
+                                            <div>px</div>
+                                            <div>px</div>
+                                            <div>%</div>
+                                            <div>deg</div>
+                                            <div>deg</div>
+                                            <div>px</div>
+                                            <div>%</div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-ctrl">
+                    <h1>Text</h1>
+                    <div>
+                        <div class="text-settings">
+                            <div class="options">
+                                <div>
+                                    <div class="properties">
+                                        <div>
+                                            <input id="text_content" type="text" placeholder="Text">
+                                        </div>
+                                        <div>
+                                            <input id="text_color" pattern="[a-fA-F0-9]+$" type="text" placeholder="Color Hex" maxlength="6">
+                                            <input id="text_size" type="number" placeholder="Font Size">
+                                            <input id="text_font" type="text" disabled placeholder="Font">
+                                            <input id="text_weight" type="text" disabled placeholder="Font Weight">
+                                        </div>
+                                    </div>
+                                    <div class="mods">
+                                        <section class="titles">
+                                            <span id="x">X</span>
+                                            <span id="y">Y</span>
+                                            <span id="scale">Scale</span>
+                                            <span id="rotation">Rotation</span>
+                                            <span id="skew">Skew</span>
+                                            <span id="opacity">Opacity</span>
+                                        </section>
+                                        <section class="sliders">
+                                            <input type="range" min="0" max="100">
+                                            <input type="range" min="0" max="100">
+                                            <input type="range" min="0" max="200">
+                                            <input type="range" min="0" max="360" value="0">
+                                            <input type="range" min="-45" max="45">
+                                            <input type="range" value="100">
+                                        </section>
+                                        <section class="values">
+                                            <input type="number" min="0" max="100" value="50">
+                                            <input type="number" min="0" max="100" value="50">
+                                            <input type="number" min="0" max="200" value="100">
+                                            <input type="number" min="0" max="360" value="0">
+                                            <input type="number" min="-45" max="45" value="0">
+                                            <input type="number" min="0" max="100" value="100">
+                                        </section>
+                                        <section class="units">
+                                            <div>%</div>
+                                            <div>%</div>
+                                            <div>%</div>
+                                            <div>deg</div>
+                                            <div>deg</div>
+                                            <div>%</div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display">
+            <div class="general">
+                <h1>
+                    <button class="active">OBS Settings</button>
+                    <button>Layers</button>
+                    <button>Safe/Load</button>
+                </h1>
+                <div id="obs_content">
+                    <div>
+                        <h3>Size (recommended)</h3>
+                        <p>Width: 1920</te>
+                        <p>Height: 1080</p>
+                    </div>
+                    <div>
+                        <h3>Transformation</h3>
+                        <p id="transform_top">Top: 1080</p>
+                        <p id="transform_left">Left: 1080</p>
+                    </div>
+                </div>
+                <div id="layers_content">
+                    Nothing to see here
+                </div>
+                <div id="safe_load_content">
+                    Nothing to see here
+                </div>
+            </div>
+            <div class="preview">
+                <div id="shape"></div>
+                <img id="image" src="" draggable="false">
+                <p id="text"></p>
+            </div>
+        </div>
+    </body>
+</html>
+
+
